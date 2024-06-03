@@ -7,7 +7,7 @@
   imports =
     [ # Include the results of the hardware scan.
       <nixos-hardware/gpd/pocket-3>
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -126,6 +126,7 @@
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
     ];
+    config.common.default = "*";
   };
 
   # Configure console keymap
