@@ -115,7 +115,7 @@
       enable = true;
       wayland.enable = true;
       enableHidpi = true;
-      theme = "where-is-my-sddm-theme";
+      theme = "catppuccin-mocha";
     };
   };
   services.dbus.enable = true;
@@ -137,9 +137,6 @@
     isNormalUser = true;
     description = "nick";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      gzdoom
-    ];
   };
 
   # Allow unfree packages
@@ -149,13 +146,21 @@
     enable = true;
   };
 
+  programs.hyprland.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   home-manager
-  where-is-my-sddm-theme
+  (pkgs.catppuccin-sddm.override {
+    flavor = "mocha";
+    # font  = "Noto Sans";
+    # fontSize = "9";
+    # background = "${./wallpaper.png}";
+    loginBackground = true;
+  })
 
   gammastep
   brightnessctl

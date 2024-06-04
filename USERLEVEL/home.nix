@@ -29,6 +29,29 @@
     steam
   ];
 
+  stylix.image = /home/nick/img/landing_site.png;
+  stylix.polarity = "dark";
+  stylix.opacity.terminal = 0.7;
+  stylix.fonts = {
+
+    sizes = {
+      terminal = 16;
+      popups = 16;
+    };
+
+    monospace = {
+      package = pkgs.nerdfonts;
+      name = "BigBlueTerm437 Nerd Font";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+    serif = config.stylix.fonts.monospace;
+    sansSerif = config.stylix.fonts.monospace;
+  };
+
   programs = {
     firefox = {
       enable = true;
@@ -63,11 +86,6 @@
     # Nice, fast terminal
     kitty = {
       enable = true;
-      font = {
-        package = pkgs.nerdfonts;
-	size = 16;
-	name = "BigBlueTerm437 Nerd Font";
-      };
     };
 
     neovim = {
