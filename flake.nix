@@ -5,7 +5,7 @@
     # NixOS official package source, using the nixos-23.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     home-manager.url = "github:nix-community/home-manager/release-23.11";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/nixos-23.11";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
