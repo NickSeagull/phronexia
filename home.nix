@@ -35,6 +35,11 @@
       enable = true;
     };
 
+    vscode = {
+      enable = true;
+      package = pkgs.vscodium;
+    };
+
     git = {
       enable = true;
       userName = "NickSeagull";
@@ -91,8 +96,10 @@
     # '';
   };
 
+  services.redshift.enable = true;
+
   services.gammastep = {
-    enable = true;
+    enable = false;
     provider = "geoclue2";
     tray = true;
     temperature.night = 2000;

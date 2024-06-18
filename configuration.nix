@@ -59,8 +59,13 @@
   };
 
   services.avahi.enable = true;
-  services.geoclue2.enable = true;
-  services.geoclue2.appConfig = { };
+  # services.geoclue2.enable = true;
+  # services.geoclue2.appConfig = {
+  #  isAllowed = true;
+  #  isSystem = true;
+  #  users = [ "nick" ];
+  # };
+  services.redshift.enable = true;
 
   programs.light.enable = true;
 
