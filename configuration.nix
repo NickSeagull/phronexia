@@ -142,7 +142,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  home-manager.users.eve = { pkgs, ... }: {
+  home-manager.users.nick = { pkgs, ... }: {
 
     nixpkgs.config.allowUnfree = true;
 
