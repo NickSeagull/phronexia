@@ -7,7 +7,6 @@
   imports =
     [
       # Include the results of the hardware scan.
-      <nixos-hardware/gpd/pocket-3>
       /etc/nixos/hardware-configuration.nix
     ];
 
