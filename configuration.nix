@@ -37,7 +37,7 @@
   time.timeZone = "Atlantic/Canary";
 
 
-  services.autoUpgrade = {
+  system.autoUpgrade = {
     enable = true;
     dates = "minutely";
     flake = "github:NickSeagull/phronexia";
