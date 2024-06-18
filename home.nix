@@ -102,11 +102,6 @@
     };
   };
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
-  };
 
 
   # Home Manager can also manage your environment variables through
