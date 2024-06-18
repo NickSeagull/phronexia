@@ -12,6 +12,7 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
+  # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.trusted-users = [ "root" "nick" ];
 
@@ -42,6 +43,13 @@
 
   # Set your time zone.
   time.timeZone = "Atlantic/Canary";
+
+
+  services.autoUpgrade = {
+    enable = true;
+    dates = "minutely";
+    flake = "github:NickSeagull/phronexia";
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -276,25 +284,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gedit # text editor
-  ]) ++ (with pkgs.gnome; [
-    cheese # webcam tool
-    gnome-music
-    gnome-terminal
-    epiphany # web browser
-    geary # email reader
-    evince # document viewer
-    gnome-characters
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-  ]);
-
   services.fprintd = {
     enable = true;
   };
@@ -304,24 +293,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
+    git
     home-manager
     fprintd
 
     busybox
     gcc
-
-    gnomeExtensions.screen-rotate
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.unite
-    gnomeExtensions.paperwm
-    gnomeExtensions.compact-top-bar
-    gnomeExtensions.always-allow-onscreen-keyboard
-    gnomeExtensions.enhanced-osk
-    gnomeExtensions.no-titlebar-when-maximized
-    gnomeExtensions.open-bar
-    gnome.gnome-tweaks
-
   ];
 
   fonts.packages = with pkgs; [
