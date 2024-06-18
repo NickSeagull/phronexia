@@ -14,8 +14,8 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
-        home-manager/nixos
-        nixos-hardware/gpd/pocket-3
+        <home-manager/nixos>
+        <nixos-hardware/gpd/pocket-3>
         ./configuration.nix
       ];
     };
