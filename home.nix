@@ -27,6 +27,7 @@
     ticktick
     vlc
     steam
+    obsidian
   ];
 
   programs = {
