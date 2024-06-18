@@ -97,6 +97,9 @@
   };
 
   services.redshift.enable = true;
+  services.redshift.dawnTime = "07:00";
+  services.redshift.duskTime = "21:00";
+  services.redshift.temperature.night = 2000;
 
   services.gammastep = {
     enable = false;
