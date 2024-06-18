@@ -26,31 +26,49 @@
     ffmpeg_7-full
     ticktick
     vlc
-    steam
+    neofetch
+    btop
+    krita
+    cool-retro-term
+    discord
+    devenv
+    flatpak
+    ardour
+    gnome.gnome-software
   ];
 
-  stylix.image = /home/nick/img/landing_site.png;
-  stylix.polarity = "dark";
-  stylix.opacity.terminal = 0.7;
-  stylix.fonts = {
+  # stylix.image = /home/nick/img/landing_site.png;
+  # stylix.polarity = "dark";
+  # stylix.opacity.terminal = 0.85;
+  # stylix.fonts = {
 
-    sizes = {
-      terminal = 16;
-      popups = 16;
-    };
+  #   monospace = {
+  #     package = pkgs.nerdfonts;
+  #     name = "BigBlueTerm437 Nerd Font";
+  #   };
 
-    monospace = {
-      package = pkgs.nerdfonts;
-      name = "BigBlueTerm437 Nerd Font";
-    };
+  #   emoji = {
+  #     package = pkgs.noto-fonts-emoji;
+  #     name = "Noto Color Emoji";
+  #   };
 
-    emoji = {
-      package = pkgs.noto-fonts-emoji;
-      name = "Noto Color Emoji";
-    };
-    serif = config.stylix.fonts.monospace;
-    sansSerif = config.stylix.fonts.monospace;
-  };
+  #   serif = {
+  #     package = pkgs.dejavu_fonts;
+  #     name = "DejaVu Serif";
+  #   };
+
+  #   # sansSerif = {
+  #   #   package = pkgs.dejavu_fonts;
+  #   #   name = "DejaVu Sans";
+  #   # };
+
+  #   # sansSerif = config.stylix.fonts.monospace;
+
+  # };
+
+  # stylix.targets = {
+  #   firefox.enable = true;
+  # };
 
   programs = {
     firefox = {
@@ -86,10 +104,27 @@
     # Nice, fast terminal
     kitty = {
       enable = true;
+      settings = {
+        hide_window_decorations = "yes";
+      };
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscodium;
+      mutableExtensionsDir = true;
+      extensions = with pkgs.vscode-extensions; [
+        vspacecode.vspacecode
+        vspacecode.whichkey
+      ];
     };
 
     neovim = {
       enable = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+      withNodeJs = true;
     };
   };
 
@@ -107,25 +142,6 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
-
-  services.gammastep = {
-      enable = true;
-      provider = "geoclue2";
-      tray = true;
-      temperature.night = 2000;
-      settings = {
-        general = {
-          brightness-night = 0.8;
-	};
-      };
-    };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
-  };
-
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -145,8 +161,6 @@
   #
   home.sessionVariables = {
     EDITOR = "neovim";
-    NIXOS_OZONE_WL = "1";
-    GTK_THEME = "Tokyonight-Dark-B";
     NIXPKGS_ALLOW_UNFREE="1";
   };
 

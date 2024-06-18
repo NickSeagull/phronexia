@@ -11,6 +11,17 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = ["root" "nick"];
+
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+
+    # Add any missing dynamic libraries for unpackaged programs
+
+    # here, NOT in environment.systemPackages
+
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -48,20 +59,11 @@
   services.avahi.enable = true;
   services.geoclue2.enable = true;
   services.geoclue2.appConfig = {
-    "gammastep" = {
-      isAllowed = true;
-      isSystem = false;
-      users = [ "1000" ];
-    };
-  };
-
-  services.physlock = {
-    allowAnyUser = true;
-    enable = true;
-    muteKernelMessages = true;
   };
 
   programs.light.enable = true;
+
+  programs.steam.enable = true;
 
   services.logind = {
     lidSwitch = "ignore";
@@ -69,6 +71,8 @@
         HandlePowerKey=ignore
     '';
   };
+
+
   services.acpid = {
     enable = true;
     lidEventCommands =
@@ -86,6 +90,21 @@
         systemctl suspend
       '';
   };
+
+  powerManagement.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power"; 
+    };
+  };
+  services.power-profiles-daemon.enable = false;
+  services.thermald.enable = true;
+
+
+
+
   
 
   # Configure keymap in X11
@@ -102,32 +121,15 @@
 	'';
       }
     ];
+    displayManager.lightdm.enable = true;
+    desktopManager.xfce.enable = true;
   };
 
   location = {
    provider = "geoclue2";
-   # latitude = 28.03;
-   # longitude = -15.41;
   };
 
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      enableHidpi = true;
-      theme = "catppuccin-mocha";
-    };
-  };
   services.dbus.enable = true;
-
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
-    config.common.default = "*";
-  };
 
   # Configure console keymap
   console.keyMap = "us-acentos";
@@ -142,11 +144,29 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  programs.waybar = {
+  environment.gnome.excludePackages = (with pkgs; [
+  gnome-photos
+  gnome-tour
+  gedit # text editor
+]) ++ (with pkgs.gnome; [
+  cheese # webcam tool
+  gnome-music
+  gnome-terminal
+  epiphany # web browser
+  geary # email reader
+  evince # document viewer
+  gnome-characters
+  totem # video player
+  tali # poker game
+  iagno # go game
+  hitori # sudoku game
+  atomix # puzzle game
+]);
+
+  services.fprintd = {
     enable = true;
   };
 
-  programs.hyprland.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -154,45 +174,22 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   home-manager
-  (pkgs.catppuccin-sddm.override {
-    flavor = "mocha";
-    # font  = "Noto Sans";
-    # fontSize = "9";
-    # background = "${./wallpaper.png}";
-    loginBackground = true;
-  })
-
-  gammastep
-  brightnessctl
-  hyprland
-  wlr-protocols
-  xdg-desktop-portal
-  xdg-desktop-portal-gtk
-  xdg-desktop-portal-hyprland
-  xdg-desktop-portal-wlr
-  xwayland
-  eww
-  swww
-
-  meson
-  wayland-protocols
-  wayland-utils
-  wl-clipboard
-  wlroots
-
-
-  pavucontrol
-  pipewire
+  fprintd
 
   busybox
   gcc
 
-  dunst
-  libnotify
+  gnomeExtensions.screen-rotate
+  gnomeExtensions.burn-my-windows
+  gnomeExtensions.unite
+  gnomeExtensions.paperwm
+  gnomeExtensions.compact-top-bar
+  gnomeExtensions.always-allow-onscreen-keyboard
+  gnomeExtensions.enhanced-osk
+  gnomeExtensions.no-titlebar-when-maximized
+  gnomeExtensions.open-bar
+  gnome.gnome-tweaks
 
-  networkmanagerapplet
-
-  wofi
   ];
 
   fonts.packages = with pkgs; [
@@ -203,18 +200,13 @@
     comic-mono
     material-icons
     terminus_font_ttf
+    dejavu_fonts
     fixedsys-excelsior
   ];
 
   sound.enable = true;
 
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
