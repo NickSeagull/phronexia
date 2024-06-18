@@ -25,7 +25,7 @@
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
         }
-        <nixos-hardware/gpd/pocket-3>
+        nixos-hardware.nixosModules.gpd-pocket-3
       ];
     };
   };
