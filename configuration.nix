@@ -40,6 +40,10 @@
   system.autoUpgrade = {
     enable = true;
     dates = "minutely";
+    flags = [
+      "--no-write-lock-file"
+      "-L"
+    ];
     flake = "github:NickSeagull/phronexia";
   };
 
