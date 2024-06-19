@@ -28,6 +28,7 @@
     vlc
     steam
     obsidian
+    inkscape
   ];
 
   programs = {
