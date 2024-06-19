@@ -29,6 +29,7 @@
     steam
     obsidian
     inkscape
+    gimp
   ];
 
   programs = {
