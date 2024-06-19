@@ -1,16 +1,20 @@
-{ config, pkgs, ... }: with builtins;
+{ config, pkgs, lib, ... }: with builtins;
 let
-  configPath = ${home.homeDirectory}/phronexia;
+  xournalpp = ../programs/xournalpp.nix {inherit config pkgs};
 in {
-  imports = map (x: ${configPath}/x) [
-    programs/zsh.nix
-    programs/git.nix
-    programs/vscodium.nix
-    programs/kitty.nix
-    programs/firefox.nix
-    programs/neovim.nix
-    services/redshift.nix
-    config/session-variables.nix
+  imports = [
+    ../programs/zsh.nix
+    ../programs/git.nix
+    ../programs/vscodium.nix
+    ../programs/kitty.nix
+    ../programs/firefox.nix
+    ../programs/neovim.nix
+    ../services/redshift.nix
+    ../config/session-variables.nix
+  ];
+
+  home.packages = lib.mkMerge [
+    xournalpp.home.packages
   ];
 
   home.username = "nick";
