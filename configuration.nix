@@ -8,16 +8,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.trusted-users = [ "root" "nick" ];
 
-  programs.nix-ld.enable = true;
-
-  programs.nix-ld.libraries = with pkgs; [
-
-    # Add any missing dynamic libraries for unpackaged programs
-
-    # here, NOT in environment.systemPackages
-
-  ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -44,7 +34,7 @@
       "--no-write-lock-file"
       "-L"
     ];
-    flake = "github:NickSeagull/phronexia";
+    flake = "https://github.com/NickSeagull/phronexia";
   };
 
   # Select internationalisation properties.
