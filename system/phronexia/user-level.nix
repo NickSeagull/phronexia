@@ -17,7 +17,7 @@
     ../../applications/gimp.nix
 
     # Services
-    ../../services/redshift.nix
+    ../../services/night-light.nix
 
     # Config
     ../../config/home-manager.nix

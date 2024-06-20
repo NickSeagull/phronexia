@@ -8,85 +8,28 @@
     ../../applications/steam.system.nix
     ../../applications/zsh.system.nix
     ../../config/i18n.nix
+    ../../config/user.system.nix
     ../../config/timezone.nix
+    ../../config/fonts.system.nix
+    ../../config/nix.system.nix
+    ../../hardware/power-management.nix
+    ../../hardware/sound.nix
+    ../../hardware/bootloader.nix
+    ../../hardware/backlight.nix
+    ../../hardware/location.nix
+    ../../hardware/network.nix
+    ../../services/night-light.nix
+    ../../services/desktop.nix
+    ../../services/login.nix
+    ../../services/ipc.nix
   ];
 
-  # enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.trusted-users = [ "root" "nick" ];
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "phronexia"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking.hostName = "phronexia";
+  system.stateVersion = "23.11";
 
 
-  # Set your time zone.
-
-
-  services.avahi.enable = true;
-  services.redshift.enable = true;
-
-  programs.light.enable = true;
-
-  programs.steam.enable = true;
-
-  services.logind = {
-    lidSwitch = "ignore";
-    extraConfig = ''
-      HandlePowerKey=ignore
-    '';
-  };
-
-
-  services.acpid = {
-    enable = true;
-    lidEventCommands =
-      ''
-        export PATH=$PATH:/run/current-system/sw/bin
-
-        lid_state=$(cat /proc/acpi/button/lid/LID0/state | awk '{print $NF}')
-        if [ $lid_state = "closed" ]; then
-            systemctl suspend
-        fi
-      '';
-
-    powerEventCommands =
-      ''
-        systemctl suspend
-      '';
-  };
-
-  powerManagement.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-    };
-  };
-  services.power-profiles-daemon.enable = false;
-  services.thermald.enable = true;
-
-
-
-
-
-
-  # Configure keymap in X11
+  # Rotate the screen correctly
   services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    xkb.variant = "intl";
     xrandrHeads = [
       {
         output = "DSI-1";
@@ -96,89 +39,7 @@
           	'';
       }
     ];
-    displayManager.lightdm.enable = true;
-    desktopManager.xfce.enable = true;
   };
 
-  location = {
-    provider = "geoclue2";
-  };
-
-  services.dbus.enable = true;
-
-  # Configure console keymap
-  console.keyMap = "us-acentos";
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nick = {
-    isNormalUser = true;
-    description = "nick";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-  };
-
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  services.fprintd = {
-    enable = true;
-  };
-
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    git
-    home-manager
-    fprintd
-
-    busybox
-    gcc
-  ];
-
-  fonts.packages = with pkgs; [
-    nerdfonts
-    meslo-lgs-nf
-    jetbrains-mono
-    font-awesome
-    comic-mono
-    material-icons
-    terminus_font_ttf
-    dejavu_fonts
-    fixedsys-excelsior
-  ];
-
-  sound.enable = true;
-
-  security.rtkit.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
 
 }

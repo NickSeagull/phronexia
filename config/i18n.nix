@@ -14,4 +14,11 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
+
+  console.keyMap = "us-acentos";
+  
+  services.xserver.xkb = {
+    layour = "us";
+    variant = "intl";
+  };
 }
