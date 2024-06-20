@@ -32,56 +32,6 @@
     gimp
   ];
 
-  programs = {
-    firefox = {
-      enable = true;
-    };
-
-    vscode = {
-      enable = true;
-      package = pkgs.vscodium;
-    };
-
-    git = {
-      enable = true;
-      userName = "NickSeagull";
-      userEmail = "git@nickseagull.dev";
-      delta.enable = true;
-      lfs.enable = true;
-      aliases = {
-        p = "push";
-        co = "checkout";
-        c = "commit";
-      };
-      extraConfig = {
-        init = {
-          defaultBranch = "main";
-        };
-      };
-    };
-
-    zsh = {
-      enable = true;
-      autosuggestion.enable = true;
-      enableCompletion = true;
-      envExtra = ''
-      '';
-    };
-
-    # Nice, fast terminal
-    kitty = {
-      enable = true;
-      font = {
-        package = pkgs.nerdfonts;
-        size = 16;
-        name = "BigBlueTerm437 Nerd Font";
-      };
-    };
-
-    neovim = {
-      enable = true;
-    };
-  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -96,23 +46,6 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-  };
-
-  services.redshift.enable = true;
-  services.redshift.dawnTime = "07:00";
-  services.redshift.duskTime = "21:00";
-  services.redshift.temperature.night = 2000;
-
-  services.gammastep = {
-    enable = false;
-    provider = "geoclue2";
-    tray = true;
-    temperature.night = 2000;
-    settings = {
-      general = {
-        brightness-night = 0.8;
-      };
-    };
   };
 
 
@@ -133,13 +66,6 @@
   #
   #  /etc/profiles/per-user/nick/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "neovim";
-    NIXOS_OZONE_WL = "1";
-    GTK_THEME = "Tokyonight-Dark-B";
-    NIXPKGS_ALLOW_UNFREE = "1";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
