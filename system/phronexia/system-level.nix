@@ -18,7 +18,6 @@
     ../../hardware/backlight.nix
     ../../hardware/location.nix
     ../../hardware/network.nix
-    ../../services/night-light.nix
     ../../services/desktop.nix
     ../../services/login.nix
     ../../services/ipc.nix

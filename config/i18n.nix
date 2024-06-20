@@ -16,9 +16,9 @@
   };
 
   console.keyMap = "us-acentos";
-  
+
   services.xserver.xkb = {
-    layour = "us";
+    layout = "us";
     variant = "intl";
   };
 }
