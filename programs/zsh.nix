@@ -5,8 +5,8 @@
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
-    envExtra = ''
-      # Add any extra environment variables or configuration settings here
-    '';
+    shellAliases = {
+        upgrade-system = "cd $HOME/phronexia && git pull --rebase && sudo nixos-rebuild switch";
+    };
   };
 }

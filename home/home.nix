@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }: with builtins;
 let
-  xournalpp = ../programs/xournalpp.nix {inherit config pkgs};
+  xournalpp = import ../programs/xournalpp.nix {inherit config pkgs; };
 in {
   imports = [
     ../programs/zsh.nix
