@@ -13,18 +13,13 @@
     nixosConfigurations.phronexia = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-        ./configuration.nix
-        ./hardware/gp3.nix
+        ./system/phronexia/system-level.nix
+        ./hardware/generated/gp3.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.nick = import ./users/default.nix;
-
-          # Optionally, use home-manager.extraSpecialArgs to pass
-          # arguments to home.nix
+          home-manager.users.nick = import ./system/phronexia/user-level.nix;
         }
         nixos-hardware.nixosModules.gpd-pocket-3
       ];

@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
-
+/*
+* This module is imported at system level, because it is the system shell,
+*/
 {
   programs.zsh = {
     enable = true;
