@@ -4,6 +4,10 @@
 
 { config, pkgs, ... }:
 {
+  imports = [
+    ./programs/zsh.nix
+  ];
+
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.trusted-users = [ "root" "nick" ];
@@ -26,16 +30,6 @@
   # Set your time zone.
   time.timeZone = "Atlantic/Canary";
 
-
-  system.autoUpgrade = {
-    enable = true;
-    dates = "minutely";
-    flags = [
-      "--no-write-lock-file"
-      "-L"
-    ];
-    flake = "https://github.com/NickSeagull/phronexia";
-  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -139,6 +133,7 @@
     isNormalUser = true;
     description = "nick";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
   };
 
 

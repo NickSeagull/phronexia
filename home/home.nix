@@ -3,7 +3,6 @@ let
   xournalpp = import ../programs/xournalpp.nix {inherit config pkgs; };
 in {
   imports = [
-    ../programs/zsh.nix
     ../programs/git.nix
     ../programs/vscodium.nix
     ../programs/kitty.nix
@@ -20,5 +19,9 @@ in {
   home.username = "nick";
   home.homeDirectory = "/home/nick";
   home.stateVersion = "24.05";
+
+  home.shellAliases = {
+        upgrade-system = "cd $HOME/phronexia && git pull --rebase && sudo nixos-rebuild switch";
+    };
   programs.home-manager.enable = true;
 }
