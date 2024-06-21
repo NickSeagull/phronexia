@@ -29,9 +29,6 @@
     # Access your GitHub actions from within VS Code
     github.vscode-github-actions
 
-    # Visualize JSON data as a graph
-    aykutsarac.jsoncrack-vscode
-
     # Search everywhere in the editor using fuzzy
     kbysiec.vscode-search-everywhere
   ];
