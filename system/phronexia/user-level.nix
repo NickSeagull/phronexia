@@ -7,17 +7,18 @@
 
     ../../misc/terminal/kitty.nix
 
-    ../../multimedia/video/obs-studio.nix
     ../../multimedia/video/ffmpeg.nix
+    ../../multimedia/video/obs-studio.nix
+    ../../multimedia/video/vlc.nix
+    ../../multimedia/image/inkscape.nix
+    ../../multimedia/image/gimp.nix
+    ../../multimedia/games/steam.nix
 
-    ../../misc/firefox.nix
-    ../../misc/xournalpp.nix
-    ../../misc/ticktick.nix
-    ../../misc/vlc.nix
-    ../../misc/steam.nix
-    ../../misc/obsidian.nix
-    ../../misc/inkscape.nix
-    ../../misc/gimp.nix
+    ../../network/browser/firefox.nix
+
+    ../../productivity/notes/xournalpp.nix
+    ../../productivity/notes/obsidian.nix
+    ../../productivity/tasks/ticktick.nix
 
     # Services
     ../../services/night-light.nix
