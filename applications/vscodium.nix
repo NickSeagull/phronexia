@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./vscodium/keybindings/vspacecode.nix
+  ];
+  
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
