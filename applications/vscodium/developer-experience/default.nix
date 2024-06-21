@@ -8,9 +8,6 @@
     visualstudioexptteam.vscodeintellicode
     visualstudioexptteam.intellicode-api-usage-examples
 
-    # VS Code for doing stuff with the voice
-    ms-vscode.vscode-speech
-
     # Show errors and warnings inline
     usernamehw.errorlens
 
