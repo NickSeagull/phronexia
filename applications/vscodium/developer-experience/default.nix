@@ -18,6 +18,7 @@
     editorconfig.editorconfig
 
     # Show tests in the sidebar
+    ms-vscode.test-adapter-converter
     hbenl.vscode-test-explorer
 
     # Spell checker for source code
