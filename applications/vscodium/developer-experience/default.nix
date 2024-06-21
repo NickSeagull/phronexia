@@ -28,8 +28,5 @@
 
     # Access your GitHub actions from within VS Code
     github.vscode-github-actions
-
-    # Search everywhere in the editor using fuzzy
-    kbysiec.vscode-search-everywhere
   ];
 }
