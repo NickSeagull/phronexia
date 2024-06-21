@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../../multimedia/steam.system.nix
+    ../../multimedia/games/steam.system.nix
     ../../misc/terminal/zsh.system.nix
     ../../config/i18n.nix
     ../../config/user.system.nix
