@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  
   networking.networkmanager.enable = true;
 
   # Enable network discovery
-  services.avahi.enable = true;  
+  services.avahi.enable = true;
 }
