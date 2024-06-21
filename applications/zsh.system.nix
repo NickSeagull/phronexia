@@ -7,6 +7,8 @@
     enable = true;
     shellAliases = {
       upgrade-system = "cd $HOME/phronexia && git pull --rebase && sudo nixos-rebuild switch";
+      code = "codium";
+      gcu = "git add . && git commit -m Update"
     };
   };
 }
