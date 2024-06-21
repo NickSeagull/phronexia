@@ -20,9 +20,6 @@
     # Show tests in the sidebar
     hbenl.vscode-test-explorer
 
-    # Allow separating monorepos into multiple workspaces
-    folke.vscode-monorepo-workspace
-
     # Spell checker for source code
     streetsidesoftware.code-spell-checker
 
