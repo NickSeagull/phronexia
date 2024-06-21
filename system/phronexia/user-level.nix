@@ -1,14 +1,17 @@
 { config, pkgs, lib, ... }: with builtins;
 {
   imports = [
-    ../../misc/git.nix
-    ../../misc/vscode/default.nix
-    ../../misc/kitty.nix
+    ../../coding/editor/neovim/default.nix
+    ../../coding/editor/vscode/default.nix
+    ../../coding/version-control/git.nix
+
+    ../../misc/terminal/kitty.nix
+
+    ../../multimedia/video/obs-studio.nix
+    ../../multimedia/video/ffmpeg.nix
+
     ../../misc/firefox.nix
-    ../../misc/neovim.nix
     ../../misc/xournalpp.nix
-    ../../misc/obs-studio.nix
-    ../../misc/ffmpeg.nix
     ../../misc/ticktick.nix
     ../../misc/vlc.nix
     ../../misc/steam.nix

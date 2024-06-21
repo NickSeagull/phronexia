@@ -21,13 +21,15 @@
     ms-vscode.test-adapter-converter
     hbenl.vscode-test-explorer
 
-    # Spell checker for source code
-    streetsidesoftware.code-spell-checker
-
     # Take cool screenshots of the code
     adpyke.codesnap
 
     # Access your GitHub actions from within VS Code
     github.vscode-github-actions
   ];
+
+  programs.vscode.userSettings = {
+    # Do not ask when moving stuff
+    explorer.confirmDragAndDrop = false;
+  };
 }

@@ -7,7 +7,12 @@
     enable = true;
 
     shellAliases = {
+      # A workflow that I usually do in my systems is to code from
+      # the computer I'm currently at, and then just upgrade using this command
       upgrade-system = "cd $HOME/phronexia && git pull --rebase && sudo nixos-rebuild switch";
+
+      # This is for quick edits at repos
+      # TODO: Make this use the GPT commit message utility
       gcu = "git add . && git commit -m Update";
     };
 
