@@ -135,5 +135,5 @@ programs.vscode.keybindings = [
     command = "file-browser.stepIn";
     when = "inFileBrowser";
   }
-]
+];
 }
