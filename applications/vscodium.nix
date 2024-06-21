@@ -3,6 +3,7 @@
 {
   imports = [
     ./vscodium/keybindings/vspacecode.nix
+    ./vscodium/settings/vspacecode.nix
   ];
   
   programs.vscode = {
