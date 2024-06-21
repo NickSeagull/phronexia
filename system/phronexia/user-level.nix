@@ -1,20 +1,20 @@
 { config, pkgs, lib, ... }: with builtins;
 {
   imports = [
-    ../../applications/git.nix
-    ../../applications/vscodium/default.nix
-    ../../applications/kitty.nix
-    ../../applications/firefox.nix
-    ../../applications/neovim.nix
-    ../../applications/xournalpp.nix
-    ../../applications/obs-studio.nix
-    ../../applications/ffmpeg.nix
-    ../../applications/ticktick.nix
-    ../../applications/vlc.nix
-    ../../applications/steam.nix
-    ../../applications/obsidian.nix
-    ../../applications/inkscape.nix
-    ../../applications/gimp.nix
+    ../../misc/git.nix
+    ../../misc/vscodium/default.nix
+    ../../misc/kitty.nix
+    ../../misc/firefox.nix
+    ../../misc/neovim.nix
+    ../../misc/xournalpp.nix
+    ../../misc/obs-studio.nix
+    ../../misc/ffmpeg.nix
+    ../../misc/ticktick.nix
+    ../../misc/vlc.nix
+    ../../misc/steam.nix
+    ../../misc/obsidian.nix
+    ../../misc/inkscape.nix
+    ../../misc/gimp.nix
 
     # Services
     ../../services/night-light.nix

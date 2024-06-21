@@ -5,8 +5,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../../applications/steam.system.nix
-    ../../applications/zsh.system.nix
+    ../../misc/steam.system.nix
+    ../../misc/zsh.system.nix
     ../../config/i18n.nix
     ../../config/user.system.nix
     ../../config/timezone.nix
