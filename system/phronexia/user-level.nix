@@ -2,7 +2,7 @@
 {
   imports = [
     ../../misc/git.nix
-    ../../misc/vscodium/default.nix
+    ../../misc/vscode/default.nix
     ../../misc/kitty.nix
     ../../misc/firefox.nix
     ../../misc/neovim.nix
