@@ -16,7 +16,6 @@
       modules = [
         ./hosts/phronexia/system-level.nix
         ./hosts/phronexia/hardware.nix
-        ./desktop/themes/default.system.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
