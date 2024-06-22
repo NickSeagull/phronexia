@@ -14,7 +14,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/phronexia/system-level.nix
-        ./hardware/generated/gp3.nix
+        ./hosts/phronexia/hardware.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
