@@ -1,6 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, chicago95, ... }:
 {
-  home.sessionVariables = {
-    GTK_THEME = "Chicago95";
+  gtk.theme = {
+    name = "Chicago95";
+    package = chicago95.defaultPackage.x86_64-linux;
   };
 }
