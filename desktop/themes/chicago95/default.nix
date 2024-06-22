@@ -1,6 +1,6 @@
 { stdenv, fetchFromGitHub, gtk-engine-murrine }:
 
-stdenv.mkDerivation rec {
+stdenvNoCC.mkDerivation rec {
   pname = "chicago95";
   version = "2.0";
 
@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   propagatedUserEnvPkgs = [ gtk-engine-murrine ];
 
-  installPhase = ''
+  postInstallPhase = ''
     mkdir -p $out/share/themes
     cp -r Theme/Chicago95 $out/share/themes
 
