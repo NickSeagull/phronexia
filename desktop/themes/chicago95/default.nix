@@ -14,9 +14,9 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/usr/share/themes
-    cp -r Theme/Chicago95 $out/usr/share/themes
+    cp -r Theme/Chicago95 $out/share/themes
 
-    mkdir -p $out/usr/share/icons
-    cp -r Icons/* $out/usr/share/icons
+    mkdir -p $out/share/icons
+    cp -r Icons/* $out/share/icons
   '';
 }
