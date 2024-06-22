@@ -7,6 +7,8 @@
 
     ../../misc/terminal/kitty.nix
 
+    ../../desktop/themes/default.nix
+
     ../../multimedia/video/ffmpeg.nix
     ../../multimedia/video/obs-studio.nix
     ../../multimedia/video/vlc.nix
