@@ -37,8 +37,8 @@
         output = "DSI-1";
         primary = true;
         monitorConfig = ''
-          	  Option "Rotate" "right"
-          	'';
+          Option "Rotate" "right"
+        '';
       }
     ];
   };
