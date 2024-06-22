@@ -28,6 +28,7 @@
       CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
     };
   };
+
   services.power-profiles-daemon.enable = false;
   services.thermald.enable = true;
 

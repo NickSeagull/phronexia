@@ -13,14 +13,14 @@
     nixosConfigurations.phronexia = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./system/phronexia/system-level.nix
+        ./hosts/phronexia/system-level.nix
         ./hardware/generated/gp3.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
-          home-manager.users.nick = import ./system/phronexia/user-level.nix;
+          home-manager.users.nick = import ./hosts/phronexia/user-level.nix;
         }
         nixos-hardware.nixosModules.gpd-pocket-3
       ];

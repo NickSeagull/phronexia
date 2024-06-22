@@ -6,26 +6,29 @@
 {
   imports = [
     ../../multimedia/games/steam.system.nix
+
     ../../misc/terminal/zsh.system.nix
-    ../../config/i18n.nix
+
     ../../config/user.system.nix
-    ../../config/timezone.nix
-    ../../config/fonts.system.nix
-    ../../config/nix.system.nix
-    ../../hardware/power-management.nix
-    ../../hardware/sound.nix
-    ../../hardware/bootloader.nix
-    ../../hardware/backlight.nix
-    ../../hardware/location.nix
-    ../../hardware/network.nix
-    ../../services/desktop.nix
-    ../../services/login.nix
+
+    ../../network/discovery.system.nix
+    ../../network/management.system.nix
+
+    ../../system/power-management.system.nix
+    ../../system/sound.system.nix
+    ../../system/bootloader.system.nix
+    ../../system/backlight.system.nix
+    ../../system/package-management.system.nix
+    ../../system/location.system.nix
+
+    ../../desktop/desktop-manager.system.nix
+    ../../desktop/login-screen.system.nix
+    ../../desktop/fonts.system.nix
+
     ../../services/ipc.nix
   ];
 
   networking.hostName = "phronexia";
-  system.stateVersion = "23.11";
-
 
   # Rotate the screen correctly
   services.xserver = {

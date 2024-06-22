@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+  system.stateVersion = "23.11";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.trusted-users = [ "root" "nick" ];
-  nixpkgs.config.allowUnfree = true;
 }

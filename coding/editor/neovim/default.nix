@@ -7,4 +7,8 @@
   programs.neovim = {
     enable = true;
   };
+
+  home.sessionVariables = {
+    EDITOR = "nvim"; # Set Neovim as the default editor
+  };
 }

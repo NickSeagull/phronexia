@@ -14,18 +14,16 @@
     ../../multimedia/image/gimp.nix
     ../../multimedia/games/steam.nix
 
-    ../../network/browser/firefox.nix
+    ../../network/browser.nix
 
     ../../productivity/notes/xournalpp.nix
     ../../productivity/notes/obsidian.nix
     ../../productivity/tasks/ticktick.nix
 
-    # Services
+    ../../package-management/home-manager.nix
+
     ../../services/night-light.nix
 
-    # Config
-    ../../config/home-manager.nix
-    ../../config/session-variables.nix
     ../../config/user.nix
   ];
 
