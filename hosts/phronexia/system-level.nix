@@ -21,7 +21,6 @@
     ../../system/package-management.system.nix
     ../../system/location.system.nix
 
-    ../../desktop/themes/default.system.nix
     ../../desktop/desktop-manager.system.nix
     ../../desktop/login-screen.system.nix
     ../../desktop/fonts.system.nix

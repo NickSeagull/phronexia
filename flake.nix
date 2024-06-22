@@ -15,6 +15,10 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/phronexia/system-level.nix
+        {
+          environment.systemPackages = [ chicago95.defaultPackage.x86_64-linux ];
+        }
+
         ./hosts/phronexia/hardware.nix
         home-manager.nixosModules.home-manager
         {
