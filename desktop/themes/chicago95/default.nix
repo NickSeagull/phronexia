@@ -13,7 +13,7 @@ stdenvNoCC.mkDerivation rec {
 
   propagatedUserEnvPkgs = [ gtk-engine-murrine ];
 
-  postInstallPhase = ''
+  installPhase = ''
     mkdir -p $out/share/themes
     cp -r Theme/Chicago95 $out/share/themes
 
