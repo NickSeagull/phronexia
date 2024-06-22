@@ -20,7 +20,7 @@
     ../../productivity/notes/obsidian.nix
     ../../productivity/tasks/ticktick.nix
 
-    ../../package-management/home-manager.nix
+    ../../system/package-management.nix
 
     ../../services/night-light.nix
 
