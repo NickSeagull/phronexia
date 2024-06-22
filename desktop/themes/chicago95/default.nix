@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
     owner = "grassmunk";
     repo = "Chicago95";
     rev = "bdf5cf36a16102aaac297f3de887c601c2b1146f";
-    sha256 = 'sha256-1TW3bUZOUB6AGZ4zC274YpDg6t/UfZFEuDCHqtbw2oU=';
+    sha256 = "sha256-1TW3bUZOUB6AGZ4zC274YpDg6t/UfZFEuDCHqtbw2oU=";
   };
 
   propagatedUserEnvPkgs = [ gtk-engine-murrine ];
