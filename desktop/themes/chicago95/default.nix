@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   propagatedUserEnvPkgs = [ gtk-engine-murrine ];
 
   installPhase = ''
-    mkdir -p $out/usr/share/themes
+    mkdir -p $out/share/themes
     cp -r Theme/Chicago95 $out/share/themes
 
     mkdir -p $out/share/icons
