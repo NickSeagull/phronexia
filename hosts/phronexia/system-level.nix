@@ -32,7 +32,7 @@
 
   # Rotate the screen correctly
   services.xserver = {
-    dpi = 227;
+    dpi = lib.mkForce 180;
     xrandrHeads = [
       {
         output = "DSI-1";
