@@ -39,8 +39,8 @@
         primary = true;
         monitorConfig = ''
           Option "Rotate" "right"
+          Option "Scale" "0.65x0.65"
         '';
-          # Option "Scale" "0.75x0.75"
       }
     ];
   };
