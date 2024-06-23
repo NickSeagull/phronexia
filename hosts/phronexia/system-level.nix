@@ -32,7 +32,7 @@
 
   # Rotate the screen correctly
   services.xserver = {
-    dpi = lib.mkForce 180;
+    dpi = lib.mkForce 223;
     xrandrHeads = [
       {
         output = "DSI-1";
@@ -45,9 +45,9 @@
   };
 
   environment.variables = {
-    GDK_SCALE = "2";
-    GDK_DPI_SCALE = "2";
-    _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
+    # GDK_SCALE = "2";
+    # GDK_DPI_SCALE = "2";
+    # _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
 
 }
