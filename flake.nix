@@ -27,7 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "bak";
-            home-manager.users.nick = import ./hosts/phronexia/user-level.nix { inherit lib pkgs chicago95; };
+            home-manager.users.nick = import ./hosts/phronexia/user-level.nix { inherit self.lib pkgs chicago95; };
           }
           nixos-hardware.nixosModules.gpd-pocket-3
         ];
