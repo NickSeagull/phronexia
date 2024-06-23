@@ -1,5 +1,5 @@
 { chicago95 }:
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 let pkg =chicago95.defaultPackage.x86_64-linux;
 in
 {
