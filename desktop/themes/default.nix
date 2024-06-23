@@ -1,4 +1,4 @@
-{chicago95}:
+{ chicago95 }:
 { pkgs, ... }:
 {
   gtk = {
@@ -8,4 +8,9 @@
       package = chicago95.defaultPackage.x86_64-linux;
     };
   };
+
+  home.sessionVariables =
+    {
+      GTK_THEME = "Chicago95";
+    };
 }
