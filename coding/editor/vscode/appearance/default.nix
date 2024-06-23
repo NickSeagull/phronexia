@@ -13,7 +13,7 @@
         name = "oldschool-theme";
         publisher = "EricsonWillians";
         version = "0.0.7";
-        sha256 = "sha256-CtC50o3wiI8s3uj03pyZxy9l4YmbHcVuLS63TP1NIno=";
+        sha256 = "sha256-1x2ey8kR4QELCpIrFS0wleKL59n/0LVrMvKbaSO+8aU=";
       }
     ];
 
