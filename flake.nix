@@ -2,7 +2,6 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    # NixOS official package source, using the nixos-23.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +20,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
-          home-manager.users.nick = (import ./hosts/phronexia/user-level.nix) inputs;
+          home-manager.users.nick = import ./hosts/phronexia/user-level.nix;
         }
         nixos-hardware.nixosModules.gpd-pocket-3
       ];
