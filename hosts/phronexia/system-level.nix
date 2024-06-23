@@ -39,7 +39,7 @@
         primary = true;
         monitorConfig = ''
           Option "Rotate" "right"
-          DisplaySize 1080 1920
+          DisplaySize 1050 1600
         '';
       }
     ];
