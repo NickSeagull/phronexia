@@ -7,7 +7,7 @@
 
     ../../misc/terminal/kitty.nix
 
-    ../../desktop/themes/default.nix
+    ../../desktop/themes/default.nix {inherit config pkgs lib chicago95;}
 
     ../../multimedia/video/ffmpeg.nix
     ../../multimedia/video/obs-studio.nix
