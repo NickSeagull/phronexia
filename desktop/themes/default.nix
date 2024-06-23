@@ -4,7 +4,7 @@
     enable = true;
     theme = {
       name = "Chicago95";
-      package = chicago95.defaultPackage.x86_64-linux;
+      package = pkgs.chicago95;
     };
   };
 }
