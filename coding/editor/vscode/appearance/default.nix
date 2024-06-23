@@ -7,7 +7,7 @@
         name = "vsclassic-icon-theme";
         publisher = "jez9999";
         version = "1.2.1";
-        # sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
+        sha256 = "sha256-CtC50o3wiI8s3uj03pyZxy9l4YmbHcVuLS63TP1NIno=";
       }
     ];
 
