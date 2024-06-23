@@ -20,6 +20,7 @@
 
   programs.vscode.userSettings = {
     workbench.iconTheme = "vsclassic-icon-theme";
+    workbench.colorTheme = "Oldschool Theme (Evil)";
   };
 
 }
