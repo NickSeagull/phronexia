@@ -19,5 +19,8 @@ stdenvNoCC.mkDerivation rec {
 
     mkdir -p $out/share/icons
     cp -r Icons/* $out/share/icons
+
+    mkdir -p $out/share/fonts
+    cp -r Fonts/vga_font/LessPerfectDOSVGA.ttf $out/share/fonts
   '';
 }
