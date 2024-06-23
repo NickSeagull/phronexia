@@ -8,7 +8,7 @@
 
     ../../misc/terminal/kitty.nix
 
-    ../../desktop/themes/default.nix {inherit chicago95;}
+    (import ../../desktop/themes/default.nix {inherit chicago95;} )
 
     ../../multimedia/video/ffmpeg.nix
     ../../multimedia/video/obs-studio.nix
