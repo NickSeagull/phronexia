@@ -1,4 +1,5 @@
-{ pkgs, chicago95, ... }:
+{chicago95}:
+{ pkgs, ... }:
 {
   gtk = {
     enable = true;

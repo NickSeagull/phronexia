@@ -1,4 +1,5 @@
-{ config, pkgs, lib, chicago95, ... }@inputs: with builtins;
+{chicago95}:
+{ config, pkgs, lib, ... }@inputs: with builtins;
 {
   imports = [
     ../../coding/editor/neovim/default.nix
@@ -7,7 +8,7 @@
 
     ../../misc/terminal/kitty.nix
 
-    ../../desktop/themes/default.nix {inherit config pkgs lib chicago95;}
+    ../../desktop/themes/default.nix {inherit chicago95;}
 
     ../../multimedia/video/ffmpeg.nix
     ../../multimedia/video/obs-studio.nix
