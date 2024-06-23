@@ -21,7 +21,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
-          home-manager.users.nick = import ./hosts/phronexia/user-level.nix;
+          home-manager.users.nick = (import ./hosts/phronexia/user-level.nix) inputs;
         }
         nixos-hardware.nixosModules.gpd-pocket-3
       ];

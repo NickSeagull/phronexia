@@ -1,4 +1,4 @@
-{ config, pkgs, lib, chicago95, ... }: with builtins;
+{ config, pkgs, lib, chicago95, ... }@inputs: with builtins;
 {
   imports = [
     ../../coding/editor/neovim/default.nix
