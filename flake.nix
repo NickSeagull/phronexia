@@ -9,7 +9,7 @@
     chicago95.url = "path:./desktop/themes/chicago95";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, config, lib, chicago95, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, lib, chicago95, ... }@inputs: {
     nixosConfigurations.phronexia =
       let
         system = "x86_64-linux";
@@ -27,7 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "bak";
-            home-manager.users.nick = import ./hosts/phronexia/user-level.nix { inherit config lib pkgs chicago95; };
+            home-manager.users.nick = import ./hosts/phronexia/user-level.nix { inherit lib pkgs chicago95; };
           }
           nixos-hardware.nixosModules.gpd-pocket-3
         ];
