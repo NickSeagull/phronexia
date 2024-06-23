@@ -10,29 +10,33 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, chicago95, ... }@inputs: {
-    nixosConfigurations.phronexia = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      pkgs = import nixpkgs
-        {
-          inherit system;
-          overlays = [
-            (final: prev: {
-              chicago95 = chicago95.defaultPackage.x86_64-linux;
-            })
-          ];
-        };
-      modules = [
-        ./hosts/phronexia/system-level.nix
-        ./hosts/phronexia/hardware.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "bak";
-          home-manager.users.nick = import ./hosts/phronexia/user-level.nix;
-        }
-        nixos-hardware.nixosModules.gpd-pocket-3
-      ];
-    };
+    nixosConfigurations.phronexia =
+      let
+        system = "x86_64-linux";
+      in
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        pkgs = import nixpkgs
+          {
+            inherit system;
+            overlays = [
+              (final: prev: {
+                chicago95 = chicago95.defaultPackage.x86_64-linux;
+              })
+            ];
+          };
+        modules = [
+          ./hosts/phronexia/system-level.nix
+          ./hosts/phronexia/hardware.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "bak";
+            home-manager.users.nick = import ./hosts/phronexia/user-level.nix;
+          }
+          nixos-hardware.nixosModules.gpd-pocket-3
+        ];
+      };
   };
 }
