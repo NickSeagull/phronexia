@@ -9,7 +9,7 @@
     chicago95.url = "path:./desktop/themes/chicago95";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, lib, chicago95, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, chicago95, ... }@inputs: {
     nixosConfigurations.phronexia =
       let
         system = "x86_64-linux";
