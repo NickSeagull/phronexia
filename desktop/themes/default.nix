@@ -1,4 +1,4 @@
-{ config, pkgs, lib, chicago95, ... }:
+{ pkgs, chicago95, ... }:
 {
   gtk = {
     enable = true;
