@@ -50,6 +50,4 @@
     _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
 
-  hardware.video.hidpi.enable = true;
-
 }
