@@ -9,9 +9,6 @@
       name = "BigBlueTerm437 Nerd Font";
     };
     extraConfig = ''
-      font_family      JetBrains Mono
-      font_size        14.0
-
       background       #1e2127
       foreground       #abb2bf
       selection_foreground #1e2127

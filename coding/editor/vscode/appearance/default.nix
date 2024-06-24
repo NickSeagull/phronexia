@@ -26,6 +26,7 @@
     workbench.activityBar.location = "top";
     window.menuBarVisibility = "toggle";
     editor.minimap.enabled = false;
+    editor.fontFamily = "BigBlueTerm437 Nerd Font";
   };
 
 }
