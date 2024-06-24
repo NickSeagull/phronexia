@@ -22,6 +22,10 @@
     workbench.iconTheme = "vsclassic-icon-theme";
     workbench.colorTheme = "Oldschool Theme (Evil)";
     workbench.startupEditor = "none";
+    workbench.editor.showTabs = "none";
+    workbench.activityBar.location = "top";
+    window.menuBarVisibility = "toggle";
+    editor.minimap.enabled = false;
   };
 
 }
