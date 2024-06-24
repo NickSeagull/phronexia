@@ -31,7 +31,7 @@
         name = "vscode-duplicate";
         publisher = "mrmlnc";
         version = "1.2.1";
-        sha256 = "sha256-CtC50o3wiI8s3uj03pyZxy9l4YmbHcVuLS63TP1NIno=";
+        sha256 = "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc=";
       }
     ];
 
