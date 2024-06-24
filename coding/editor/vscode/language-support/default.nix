@@ -14,19 +14,19 @@
         name = "nix-ide";
         publisher = "jnoortheen";
         version = "0.3.1";
-        sha256 = "sha256-cWXd6AlyxBroZF+cXZzzWZbYPDuOqwCZIK67cEP5sNk=";
+        #sha256 = "";
       }
       {
         name = "nix-env-selector";
         publisher = "arrterian";
         version = "1.0.11";
-        sha256 = "sha256-cWXd6AlyxBroZF+cXZzzWZbYPDuOqwCZIK67cEP5sNk=";
+        #sha256 = "";
       }
       {
         name = "direnv";
         publisher = "mkhl";
         version = "0.17.0";
-        sha256 = "sha256-cWXd6AlyxBroZF+cXZzzWZbYPDuOqwCZIK67cEP5sNk=";
+        sha256 = "sha256-9sFcfTMeLBGw2ET1snqQ6Uk//D/vcD9AVsZfnUNrWNg=";
       }
   ];
 }
