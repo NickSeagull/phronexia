@@ -27,5 +27,8 @@ stdenvNoCC.mkDerivation rec {
 
     mkdir -p $out/share/sounds
     cp -R sounds/Chicago95 $out/share/sounds
+
+    mkdir -p $out/usr/share/plymouth/themes
+    cp -R Plymouth/Chicago95 $out/usr/share/plymouth/themes
   '';
 }
