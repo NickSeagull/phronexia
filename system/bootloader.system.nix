@@ -8,6 +8,6 @@
   boot.plymouth = {
     enable = true;
     theme = "Chicago95";
-    themePackages = [ chicago95 ];
+    themePackages = [ chicago95.defaultPackage.x86_64-linux ];
   };
 }
