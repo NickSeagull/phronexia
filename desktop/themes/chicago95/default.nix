@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, gtk-engine-murrine }:
+{ stdenvNoCC, fetchFromGitHub, gtk-engine-murrine }:
 
 stdenvNoCC.mkDerivation rec {
   pname = "chicago95";
