@@ -2,6 +2,7 @@
 { config, pkgs, ... }:
 {
   programs.vscode.extensions = with pkgs.vscode-extensions; [
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     # Nix
     {
         name = "nix-extension-pack";
