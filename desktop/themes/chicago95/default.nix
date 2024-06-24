@@ -28,8 +28,8 @@ stdenvNoCC.mkDerivation rec {
     mkdir -p $out/share/sounds
     cp -R sounds/Chicago95 $out/share/sounds
 
-    mkdir -p $out/share/plymouth/themes
-    cp -R Plymouth/Chicago95 $out/share/plymouth/themes
+    mkdir -p $out/share/plymouth/themes/Chicago95
+    cp -R Plymouth/Chicago95/* $out/share/plymouth/themes/Chicago95
     find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@\/usr\/@$out\/@" {} \;
   '';
 }
