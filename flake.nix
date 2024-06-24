@@ -20,7 +20,7 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/phronexia/system-level.nix
+          (import ./hosts/phronexia/system-level.nix {inherit chicago95; })
           ./hosts/phronexia/hardware.nix
           home-manager.nixosModules.home-manager
           {

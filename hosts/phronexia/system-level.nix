@@ -2,6 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+{ chicago95 }:
 { config, pkgs, lib, ... }:
 {
   imports = [
@@ -16,7 +17,7 @@
 
     ../../system/power-management.system.nix
     ../../system/sound.system.nix
-    ../../system/bootloader.system.nix
+    (import ../../system/bootloader.system.nix {inherit chicago95; })
     ../../system/backlight.system.nix
     ../../system/package-management.system.nix
     ../../system/location.system.nix

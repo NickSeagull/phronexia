@@ -1,3 +1,4 @@
+{ chicago95 }:
 { config, pkgs, ... }:
 
 {
@@ -7,5 +8,6 @@
   boot.plymouth = {
     enable = true;
     theme = "Chicago95";
+    themePackages = [ chicago95 ];
   };
 }
