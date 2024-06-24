@@ -20,7 +20,7 @@
         name = "nix-env-selector";
         publisher = "arrterian";
         version = "1.0.11";
-        #sha256 = "";
+        sha256 = "sha256-dK0aIH8tkG/9UGblNO0WwxJABBEEKEy4nSmIwdDpf4Q=";
       }
       {
         name = "direnv";
