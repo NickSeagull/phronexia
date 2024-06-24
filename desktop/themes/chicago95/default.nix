@@ -30,5 +30,6 @@ stdenvNoCC.mkDerivation rec {
 
     mkdir -p $out/share/plymouth/themes
     cp -R Plymouth/Chicago95 $out/share/plymouth/themes
+    find $out/share/plymouth/themes/ -name \*.plymouth -exec sed -i "s@\/usr\/@$out\/@" {} \;
   '';
 }
