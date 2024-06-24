@@ -14,7 +14,7 @@
         name = "nix-ide";
         publisher = "jnoortheen";
         version = "0.3.1";
-        #sha256 = "";
+        sha256 = "sha256-05oMDHvFM/dTXB6T3rcDK3EiNG2T0tBN9Au9b+Bk7rI=";
       }
       {
         name = "nix-env-selector";
