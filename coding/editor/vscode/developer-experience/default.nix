@@ -26,7 +26,14 @@
 
     # Access your GitHub actions from within VS Code
     github.vscode-github-actions
-  ];
+  ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "vscode-duplicate";
+        publisher = "mrmlnc";
+        version = "1.2.1";
+        sha256 = "sha256-CtC50o3wiI8s3uj03pyZxy9l4YmbHcVuLS63TP1NIno=";
+      }
+    ];
 
   programs.vscode.userSettings = {
     # Do not ask when moving stuff
