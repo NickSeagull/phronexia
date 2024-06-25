@@ -22,6 +22,7 @@
     ../../productivity/notes/xournalpp.nix
     ../../productivity/notes/obsidian.nix
     ../../productivity/tasks/ticktick.nix
+    ../../productivity/cloud-storage/nextcloud.nix
 
     ../../system/package-management.nix
 
