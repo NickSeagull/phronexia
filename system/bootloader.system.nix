@@ -4,7 +4,9 @@
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "quiet" ];
+  initrd.systemd.enable = true;
+  boot.initrd.systemd.enable = true;
+  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
 
   boot.plymouth = {
     enable = true;
