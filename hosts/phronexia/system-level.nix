@@ -38,16 +38,15 @@
       {
         output = "DSI-1";
         primary = true;
-        scale = {
-          x = 0.65;
-          y = 0.65;
-        };
         monitorConfig = ''
           Option "Rotate" "right"
-          Option "Scale" "0.65x0.65"
         '';
       }
     ];
+    displayManager.setupCommands = ''
+      xrandr --output DSI1 --scale 0.65x0.65 --rotate right
+    '';
+
   };
 
   environment.variables = {
