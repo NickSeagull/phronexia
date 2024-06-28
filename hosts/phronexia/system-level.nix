@@ -43,9 +43,6 @@
         '';
       }
     ];
-    displayManager.setupCommands = ''
-      xrandr --output DSI1 --scale 0.65x0.65 --rotate right
-    '';
 
   };
 
