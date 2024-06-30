@@ -32,7 +32,7 @@
   networking.hostName = "phronexia";
 
   environment.systemPackages = [
-    (pkgs.writeScriptBin "set-gpd-pocket3-mode" ''
+    (pkgs.writeScriptBin "set-gpd-pocket3-scale" ''
       #!/bin/sh
       xrandr --output DSI1 --scale 0.75x0.75
     '')
@@ -58,6 +58,15 @@
 
 
   };
+
+  # systemd.services.set-gpd-pocket3-scale = {
+  #   description = "Set GPD Pocket 3 display scaling";
+  #   wantedBy = [ "graphical.target" ];
+  #   serviceConfig = {
+  #     ExecStart = "set-gpd-pocket3-scale";
+  #   };
+  # };
+
 
   environment.variables = {
     # GDK_SCALE = "2";
