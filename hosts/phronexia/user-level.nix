@@ -5,6 +5,7 @@
     ../../coding/editor/neovim/default.nix
     ../../coding/editor/vscode/default.nix
     ../../coding/version-control/git.nix
+    ../../coding/direnv.nix
 
     ../../misc/terminal/kitty.nix
 
