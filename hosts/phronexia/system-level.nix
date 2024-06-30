@@ -46,4 +46,15 @@
     ];
   };
 
+  environment.systemPackages = [
+    (pkgs.writeScriptBin "fix-login-rotation" ''
+      #!/bin/sh
+      xrandr --output DSI1 --rotate right
+    '')
+  ];
+
+  services.xserver.displayManager.lightdm.extraSeatDefaults = ''
+  display-setup-script=fix-login-rotation
+  '';
+
 }
