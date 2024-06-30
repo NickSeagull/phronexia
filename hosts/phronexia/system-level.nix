@@ -51,7 +51,7 @@
       }
     ];
     desktopManager.xfce = {
-      startupPrograms = [
+      extraSessionCommands = [
         "set-gpd-pocket3-scale"
       ];
     };
