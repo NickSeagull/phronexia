@@ -50,7 +50,7 @@
   ];
 
   services.xserver.displayManager.lightdm.extraSeatDefaults = ''
-  display-setup-script={pkgs.writeScriptBin "fix-login-rotation" ''
+  display-setup-script=${pkgs.writeScriptBin "fix-login-rotation" ''
       #!/bin/sh
       xrandr --output DSI1 --rotate right
     ''}/bin/fix-login-rotation
