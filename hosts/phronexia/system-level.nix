@@ -46,5 +46,8 @@
     ];
   };
 
+  services.xserver.displayManager.lightdm.extraSeatDefaults = ''
+  display-setup-script=xrandr --output DSI-1 --rotate right
+  '';
 
 }
