@@ -46,8 +46,8 @@
     ];
   };
 
-  services.xserver.displayManager.setupCommands = ''
-  ${ pkgs.xorg.xrandr }/bin/xrandr --output DSI-1 --rotate right
+  services.xserver.displayManager.lightdm.extraSeatDefaults = ''
+  greeter-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI-1 --rotate right
   '';
 
 }
