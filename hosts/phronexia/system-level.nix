@@ -37,7 +37,7 @@
     dpi = lib.mkForce 223;
     xrandrHeads = [
       {
-        output = "DSI-1";
+        output = "DSI1";
         primary = true;
         monitorConfig = ''
           Option "Rotate" "right"
@@ -47,7 +47,7 @@
   };
 
   services.xserver.displayManager.lightdm.extraSeatDefaults = ''
-  greeter-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI-1 --rotate right
+  greeter-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
   '';
 
 }
