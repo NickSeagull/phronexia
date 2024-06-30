@@ -34,9 +34,7 @@
   environment.systemPackages = [
     (pkgs.writeScriptBin "set-gpd-pocket3-mode" ''
       #!/bin/sh
-      xrandr --newmode "1280x800_60.00" 83.50 1280 1352 1480 1680 800 803 809 831 -hsync +vsync
-      xrandr --addmode DSI1 1280x800_60.00
-      xrandr --output DSI1 --mode 1280x800_60.00
+      xrandr --output DSI1 --scale 1.25x1.25
     '')
   ];
 
