@@ -53,7 +53,7 @@
     desktopManager.xfce = {
       extraSessionCommands = ''
         set-gpd-pocket3-scale
-      ''
+      '';
     };
 
 
