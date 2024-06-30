@@ -25,6 +25,7 @@
     ../../desktop/desktop-manager.system.nix
     ../../desktop/login-screen.system.nix
     ../../desktop/fonts.system.nix
+    ../../desktop/keyring.system.nix
 
     ../../services/ipc.nix
   ];
@@ -50,22 +51,16 @@
         '';
       }
     ];
-    desktopManager.xfce = {
-      extraSessionCommands = ''
-        set-gpd-pocket3-scale
-      '';
-    };
-
 
   };
 
-  # systemd.services.set-gpd-pocket3-scale = {
-  #   description = "Set GPD Pocket 3 display scaling";
-  #   wantedBy = [ "graphical.target" ];
-  #   serviceConfig = {
-  #     ExecStart = "set-gpd-pocket3-scale";
-  #   };
-  # };
+  systemd.services.set-gpd-pocket3-scale = {
+    description = "Set GPD Pocket 3 display scaling";
+    wantedBy = [ "graphical.target" ];
+    serviceConfig = {
+      ExecStart = "set-gpd-pocket3-scale";
+    };
+  };
 
 
   environment.variables = {
