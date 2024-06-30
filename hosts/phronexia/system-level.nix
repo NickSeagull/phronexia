@@ -34,7 +34,7 @@
   environment.systemPackages = [
     (pkgs.writeScriptBin "set-gpd-pocket3-mode" ''
       #!/bin/sh
-      xrandr --output DSI1 --scale 1.25x1.25
+      xrandr --output DSI1 --scale 0.75x0.75
     '')
   ];
 
@@ -50,10 +50,10 @@
         '';
       }
     ];
-    displayManager = {
-      sessionCommands = ''
-        set-gpd-pocket3-mode
-      '';
+    desktopManager.xfce = {
+      startupPrograms = [
+        "set-gpd-pocket3-scale"
+      ];
     };
 
 
