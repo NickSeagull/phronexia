@@ -44,10 +44,23 @@
         '';
       }
     ];
+    inputClassSections = [
+      ''
+        Identifier "calibration"
+        MatchProduct "GXTP7380"
+        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
+      ''
+    ];
+
+    # 90 degrees:  Option "TransformationMatrix" "-1 0 1 0 -1 1 0 0 1"
+    # 180 degrees: Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"
+    # 270 degrees: Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
+
+    displayManager.lightdm.extraSeatDefaults = ''
+    display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
+    '';
+
   };
 
-  services.xserver.displayManager.lightdm.extraSeatDefaults = ''
-  display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
-  '';
 
 }
