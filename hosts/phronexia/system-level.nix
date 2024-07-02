@@ -48,7 +48,7 @@
       ''
         Identifier "calibration"
         MatchProduct "GXTP7380"
-        Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
+        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
       ''
     ];
 
