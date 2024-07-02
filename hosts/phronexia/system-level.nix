@@ -48,10 +48,11 @@
       ''
         Identifier "calibration"
         MatchProduct "GXTP7380"
-        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
+        Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
       ''
     ];
 
+    # 0 degrees: Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
     # 90 degrees:  Option "TransformationMatrix" "-1 0 1 0 -1 1 0 0 1"
     # 180 degrees: Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"
     # 270 degrees: Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
