@@ -48,9 +48,13 @@
       ''
       Identifier "touchscreen"
       MatchProduct "GXTP7380:00 27C6:0113"
-      Option "TransformationMatrix" "-1 0 1 0 -1 1 0 0 1"
-      Option "CalibrationMatrix" "-1 0 1 0 -1 1 0 0 1"
+      Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
+      Option "CalibrationMatrix" "1 0 0 0 1 0 0 0 1"
       ''
+    ];
+
+    environment.systemPackages = with pkgs; [
+      xinput_calibrator
     ];
 
     # 0 degrees: Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
