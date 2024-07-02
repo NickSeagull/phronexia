@@ -33,7 +33,7 @@
       name = "haskell";
       publisher = "haskell";
       version = "2.4.4";
-      # sha256 = "sha256-9sFcfTMeLBGw2ET1snqQ6Uk//D/vcD9AVsZfnUNrWNg=";
+      sha256 = "sha256-O7tfZ1bQmlMgZGoWuECjSno6DLCO0+CCteRhT6PjZBY=";
     }
   ];
 
