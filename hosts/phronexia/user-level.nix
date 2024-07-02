@@ -20,6 +20,8 @@
 
     ../../network/browser.nix
 
+    ../../desktop/clipboard.nix
+
     ../../productivity/notes/xournalpp.nix
     ../../productivity/notes/obsidian.nix
     ../../productivity/tasks/ticktick.nix
