@@ -53,7 +53,7 @@
       Option "MinY" "-610"
       Option "MaxY" "65168"
       Option "SwapXY" "1"
-      Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"
+      Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
       ''
     ];
 
