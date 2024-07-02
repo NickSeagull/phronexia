@@ -37,7 +37,7 @@
     dpi = lib.mkForce 223;
     xrandrHeads = [
       {
-        output = "DSI1";
+        output = "DSI-1";
         primary = true;
         monitorConfig = ''
           Option "Rotate" "right"
