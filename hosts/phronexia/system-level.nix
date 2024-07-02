@@ -53,10 +53,6 @@
       ''
     ];
 
-    environment.systemPackages = with pkgs; [
-      xinput_calibrator
-    ];
-
     # 0 degrees: Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
     # 90 degrees:  Option "TransformationMatrix" "-1 0 1 0 -1 1 0 0 1"
     # 180 degrees: Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"
@@ -67,6 +63,10 @@
     '';
 
   };
+    environment.systemPackages = with pkgs; [
+      xinput_calibrator
+    ];
+
 
 
 }
