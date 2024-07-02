@@ -27,10 +27,22 @@
       version = "0.17.0";
       sha256 = "sha256-9sFcfTMeLBGw2ET1snqQ6Uk//D/vcD9AVsZfnUNrWNg=";
     }
+
+    # Haskell
+    {
+      name = "haskell";
+      publisher = "haskel";
+      version = "2.4.4";
+      # sha256 = "sha256-9sFcfTMeLBGw2ET1snqQ6Uk//D/vcD9AVsZfnUNrWNg=";
+    }
   ];
 
   home.packages = with pkgs; [
     # Nix
     nixpkgs-fmt
+
+    # Devenv
+    devenv
+    direnv
   ];
 }
