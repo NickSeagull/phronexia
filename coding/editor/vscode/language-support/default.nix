@@ -29,4 +29,9 @@
         sha256 = "sha256-9sFcfTMeLBGw2ET1snqQ6Uk//D/vcD9AVsZfnUNrWNg=";
       }
   ];
+
+  home.packages = with pkgs; [
+    # Nix
+    nixpkgs-fmt
+  ];
 }
