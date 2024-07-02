@@ -27,16 +27,17 @@
     # Access your GitHub actions from within VS Code
     github.vscode-github-actions
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "vscode-duplicate";
-        publisher = "mrmlnc";
-        version = "1.2.1";
-        sha256 = "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc=";
-      }
-    ];
+    {
+      name = "vscode-duplicate";
+      publisher = "mrmlnc";
+      version = "1.2.1";
+      sha256 = "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc=";
+    }
+  ];
 
   programs.vscode.userSettings = {
     # Do not ask when moving stuff
     explorer.confirmDragAndDrop = false;
+    editor.formatOnSave = true;
   };
 }
