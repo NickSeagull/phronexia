@@ -46,8 +46,8 @@
     ];
   };
 
-  services.xserver.displayManager.lightdm.extraSeatDefaults = ''
-  display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
-  '';
+  # services.xserver.displayManager.lightdm.extraSeatDefaults = ''
+  # display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
+  # '';
 
 }
