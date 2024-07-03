@@ -16,5 +16,10 @@
       gcu = "git add . && git commit -m Update";
     };
 
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+
+    ohMyZsh = {
+      enable = true;
+    };
   };
 }
