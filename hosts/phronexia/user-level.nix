@@ -1,4 +1,4 @@
-{chicago95}:
+{ chicago95 }:
 { config, pkgs, lib, ... }@inputs: with builtins;
 {
   imports = [
@@ -9,7 +9,7 @@
 
     ../../misc/terminal/kitty.nix
 
-    (import ../../desktop/themes/default.nix {inherit chicago95;} )
+    (import ../../desktop/themes/default.nix { inherit chicago95; })
 
     ../../multimedia/video/ffmpeg.nix
     ../../multimedia/video/obs-studio.nix
@@ -19,6 +19,8 @@
     ../../multimedia/games/steam.nix
 
     ../../network/browser.nix
+
+    ../../misc/terminal/zsh/p10k.nix
 
     ../../desktop/clipboard.nix
 
