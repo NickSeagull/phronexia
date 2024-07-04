@@ -18,6 +18,7 @@
     ../../multimedia/image/inkscape.nix
     ../../multimedia/image/gimp.nix
     ../../multimedia/games/steam.nix
+    ../../multimedia/sound/musescore.nix
 
     ../../network/browser.nix
 
