@@ -54,10 +54,6 @@
       ''
         Identifier "calibration"
         MatchProduct "GXTP7380:00 27C6:0113"
-        Option "MinX" "65273"
-        Option "MaxX" "-442"
-        Option "MinY" "-610"
-        Option "MaxY" "65168"
         Option "SwapXY" "1"
         Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
       ''
