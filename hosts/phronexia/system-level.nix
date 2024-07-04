@@ -17,7 +17,7 @@
 
     ../../system/power-management.system.nix
     ../../system/sound.system.nix
-    (import ../../system/bootloader.system.nix {inherit chicago95; })
+    (import ../../system/bootloader.system.nix { inherit chicago95; })
     ../../system/backlight.system.nix
     ../../system/package-management.system.nix
     ../../system/location.system.nix
@@ -31,6 +31,12 @@
   ];
 
   networking.hostName = "phronexia";
+
+  hardware.pulseaudio.enable = true;
+
+  boot.extraModprobeConfig = ''
+    options snd-intel-dspcfg dsp_driver=1
+  '';
 
   # Rotate the screen correctly
   services.xserver = {
@@ -46,14 +52,14 @@
     ];
     inputClassSections = [
       ''
-      Identifier "calibration"
-      MatchProduct "GXTP7380:00 27C6:0113"
-      Option "MinX" "65273"
-      Option "MaxX" "-442"
-      Option "MinY" "-610"
-      Option "MaxY" "65168"
-      Option "SwapXY" "1"
-      Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
+        Identifier "calibration"
+        MatchProduct "GXTP7380:00 27C6:0113"
+        Option "MinX" "65273"
+        Option "MaxX" "-442"
+        Option "MinY" "-610"
+        Option "MaxY" "65168"
+        Option "SwapXY" "1"
+        Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
       ''
     ];
 
@@ -63,13 +69,13 @@
     # 270 degrees: Option "TransformationMatrix" "1 0 0 0 1 0 0 0 1"
 
     displayManager.lightdm.extraSeatDefaults = ''
-    display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
+      display-setup-script=${ pkgs.xorg.xrandr }/bin/xrandr --output DSI1 --rotate right
     '';
 
   };
-    environment.systemPackages = with pkgs; [
-      xinput_calibrator
-    ];
+  environment.systemPackages = with pkgs; [
+    xinput_calibrator
+  ];
 
 
 
