@@ -14,6 +14,13 @@
       # This is for quick edits at repos
       # TODO: Make this use the GPT commit message utility
       gcu = "git add . && git commit -m Update";
+
+
+      # Better ls
+      l = "eza --long --header --git --icons";
+
+      # Better ls
+      ls = "eza";
     };
 
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
