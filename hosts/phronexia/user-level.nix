@@ -8,6 +8,7 @@
     ../../coding/direnv.nix
 
     ../../misc/terminal/kitty.nix
+    ../../misc/terminal/better-utils.nix
 
     (import ../../desktop/themes/default.nix { inherit chicago95; })
 
