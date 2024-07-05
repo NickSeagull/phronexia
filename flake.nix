@@ -7,6 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     chicago95.url = "path:./desktop/themes/chicago95";
+    musnix.url = "github:musnix/musnix";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, chicago95, ... }@inputs: {
@@ -19,8 +20,10 @@
       in
       nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
         modules = [
-          (import ./hosts/phronexia/system-level.nix {inherit chicago95; })
+          inputs.musnix.nixosModules.musnix
+          (import ./hosts/phronexia/system-level.nix { inherit chicago95; })
           ./hosts/phronexia/hardware.nix
           home-manager.nixosModules.home-manager
           {
