@@ -35,6 +35,12 @@
       version = "2.4.4";
       sha256 = "sha256-O7tfZ1bQmlMgZGoWuECjSno6DLCO0+CCteRhT6PjZBY=";
     }
+    {
+      name = "language-haskell";
+      publisher = "justusadam";
+      version = "3.6.0";
+      # sha256 = "";
+    }
   ];
 
   home.packages = with pkgs; [
