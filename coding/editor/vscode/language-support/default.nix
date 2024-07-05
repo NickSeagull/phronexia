@@ -39,7 +39,7 @@
       name = "language-haskell";
       publisher = "justusadam";
       version = "3.6.0";
-      # sha256 = "";
+      sha256 = "sha256-rZXRzPmu7IYmyRWANtpJp3wp0r/RwB7eGHEJa7hBvoQ=";
     }
   ];
 
