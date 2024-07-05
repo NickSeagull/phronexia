@@ -17,6 +17,7 @@
     ../../multimedia/video/vlc.nix
     ../../multimedia/image/inkscape.nix
     ../../multimedia/image/gimp.nix
+    ../../multimedia/image/krita.nix
     ../../multimedia/games/steam.nix
     ../../multimedia/sound/musescore.nix
 
