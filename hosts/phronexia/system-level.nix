@@ -22,6 +22,7 @@
     ../../system/package-management.system.nix
     ../../system/location.system.nix
     ../../system/sysinfo.system.nix
+    ../../system/windows-compat.system.nix
 
     ../../desktop/desktop-manager.system.nix
     ../../desktop/login-screen.system.nix
