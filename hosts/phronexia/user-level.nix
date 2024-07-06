@@ -8,6 +8,7 @@
     ../../coding/version-control/hub.nix
     ../../coding/direnv.nix
 
+    ../../misc/password-management.nix
     ../../misc/terminal/kitty.nix
     ../../misc/terminal/better-utils.nix
 
