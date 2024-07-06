@@ -24,6 +24,7 @@
     ../../multimedia/sound/musescore.nix
 
     ../../network/browser.nix
+    ../../network/messaging.nix
     ../../network/remote-desktop.nix
 
     ../../misc/terminal/zsh/p10k.nix
