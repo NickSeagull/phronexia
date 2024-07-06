@@ -22,6 +22,7 @@
     ../../multimedia/image/krita.nix
     ../../multimedia/games/steam.nix
     ../../multimedia/sound/musescore.nix
+    ../../multimedia/sound/ardour.nix
 
     ../../network/browser.nix
     ../../network/messaging.nix
