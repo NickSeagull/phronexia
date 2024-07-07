@@ -9,6 +9,7 @@
     ../../coding/direnv.nix
 
     ../../misc/password-management.nix
+    ../../misc/file-management.nix
     ../../misc/terminal/kitty.nix
     ../../misc/terminal/better-utils.nix
 
