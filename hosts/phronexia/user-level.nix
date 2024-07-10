@@ -24,6 +24,7 @@
     ../../multimedia/games/steam.nix
     ../../multimedia/sound/musescore.nix
     ../../multimedia/sound/ardour.nix
+    ../../multimedia/sound/bitwig.nix
 
     ../../network/browser.nix
     ../../network/messaging.nix
