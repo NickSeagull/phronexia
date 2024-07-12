@@ -21,6 +21,7 @@
     ../../multimedia/image/inkscape.nix
     ../../multimedia/image/gimp.nix
     ../../multimedia/image/krita.nix
+    ../../multimedia/image/webcam.nix
     ../../multimedia/games/steam.nix
     ../../multimedia/sound/musescore.nix
     ../../multimedia/sound/ardour.nix
