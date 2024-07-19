@@ -75,6 +75,10 @@
     xinput_calibrator
   ];
 
+  environment.sessionVariables = {
+    QT_AUTO_SCREEN_SCALE_FACTOR = "auto";
+  };
+
 
 
 }
