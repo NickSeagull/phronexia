@@ -19,7 +19,7 @@
     ../../system/sound.system.nix
     (import ../../system/bootloader.system.nix { inherit chicago95; })
     ../../system/backlight.system.nix
-    ../../network/file-systems.system.nix
+    ../../system/file-systems.system.nix
     ../../system/package-management.system.nix
     ../../system/location.system.nix
     ../../system/sysinfo.system.nix
