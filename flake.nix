@@ -57,7 +57,6 @@
             home-manager.backupFileExtension = "bak";
             home-manager.users.nick = import ./hosts/baphomet/user-level.nix { inherit chicago95; };
           }
-          nixos-hardware.nixosModules.gpd-pocket-3
         ];
       };
   };
