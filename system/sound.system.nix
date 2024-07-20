@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  sound.enable = true;
+  # sound.enable = true;
   musnix.enable = true;
   musnix.rtcqs.enable = true;
   security.rtkit.enable = true;

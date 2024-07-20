@@ -2,6 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    gnome.cheese
+    cheese
   ];
 }

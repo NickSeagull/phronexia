@@ -35,5 +35,30 @@
           nixos-hardware.nixosModules.gpd-pocket-3
         ];
       };
+
+    nixosConfigurations.baphomet =
+      let
+        system = "x86_64-linux";
+        pkgs = import nixpkgs {
+          overlays = [ self.overlays.default ];
+        };
+      in
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          inputs.musnix.nixosModules.musnix
+          (import ./hosts/baphomet/system-level.nix { inherit chicago95; })
+          ./hosts/baphomet/hardware.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "bak";
+            home-manager.users.nick = import ./hosts/baphomet/user-level.nix { inherit chicago95; };
+          }
+          nixos-hardware.nixosModules.gpd-pocket-3
+        ];
+      };
   };
 }
