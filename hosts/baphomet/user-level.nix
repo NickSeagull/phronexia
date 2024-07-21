@@ -23,9 +23,10 @@
     ../../multimedia/image/krita.nix
     ../../multimedia/image/webcam.nix
     ../../multimedia/games/steam.nix
-    ../../multimedia/sound/musescore.nix
     ../../multimedia/sound/ardour.nix
     ../../multimedia/sound/bitwig.nix
+    ../../multimedia/sound/musescore.nix
+    ../../multimedia/sound/youtube-music.nix
 
     ../../network/browser.nix
     ../../network/messaging.nix
