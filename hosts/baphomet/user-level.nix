@@ -7,6 +7,7 @@
     ../../coding/version-control/git.nix
     ../../coding/version-control/hub.nix
     ../../coding/direnv.nix
+    ../../coding/httpie.nix
 
     ../../misc/password-management.nix
     ../../misc/file-management.nix
