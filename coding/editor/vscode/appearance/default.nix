@@ -28,6 +28,7 @@
     editor.fontSize = 16;
     workbench.sideBar.location = "right";
     window.menuBarVisibility = "classic";
+    editor.lineNumbers = "relative";
   };
 
 }
