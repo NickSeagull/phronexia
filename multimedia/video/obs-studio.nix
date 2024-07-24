@@ -7,7 +7,7 @@
       obs-backgroundremoval
       obs-tuna
       obs-shaderfilter
-      obs-compositeblur
+      obs-composite-blur
     ];
   };
 
