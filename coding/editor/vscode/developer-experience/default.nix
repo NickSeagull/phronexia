@@ -33,6 +33,13 @@
       version = "1.2.1";
       sha256 = "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc=";
     }
+
+    {
+      name = "vscode-wakatime";
+      publisher = "WakaTime";
+      version = "24.6.0";
+      # sha256 = "sha256-mA3fd3rMsDnZk/LqoxRk/RF9iW+GMAAFE23wngK06cc=";
+    }
   ];
 
   programs.vscode.userSettings = {
